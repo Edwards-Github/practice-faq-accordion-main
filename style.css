@@ -75,3 +75,19 @@ button {
 .fourth-answer {
   border-bottom: none;
 }
+
+@media (max-width: 375px) {
+  .faq-container {
+    width: 325px;
+    height: 525px;
+    background-color: hsl(0, 100%, 100%);
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url('assets/background-pattern-mobile.svg');
+    background-size: 100% 232px;
+    background-repeat: no-repeat;
+  }
+}

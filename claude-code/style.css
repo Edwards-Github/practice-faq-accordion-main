@@ -1,0 +1,161 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Design Tokens ===== */
+:root {
+  --white:       hsl(0, 100%, 100%);
+  --purple-100:  hsl(275, 100%, 97%);
+  --purple-600:  hsl(292, 16%, 49%);
+  --purple-950:  hsl(292, 42%, 14%);
+
+  --font: "Work Sans", sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  background-color: var(--purple-100);
+  min-height: 100vh;
+}
+
+/* ===== Background Pattern ===== */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bg-pattern--mobile {
+  display: none;
+}
+
+/* ===== Page Layout ===== */
+.page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* ===== Card ===== */
+.card {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.card__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--purple-950);
+}
+
+/* ===== FAQ List ===== */
+.faq-list {
+  list-style: none;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--purple-100);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* ===== Details / Summary ===== */
+.faq-details {
+  padding: 20px 0;
+}
+
+/* Hide the native browser triangle marker */
+.faq-details > summary {
+  list-style: none;
+}
+.faq-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  color: var(--purple-950);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.faq-question:hover span {
+  color: var(--purple-600);
+}
+
+/* ===== Plus / Minus Icons ===== */
+.faq-icon {
+  flex-shrink: 0;
+}
+
+/* By default show plus, hide minus */
+.faq-icon--minus {
+  display: none;
+}
+
+/* When open: hide plus, show minus */
+.faq-details[open] .faq-icon--plus {
+  display: none;
+}
+
+.faq-details[open] .faq-icon--minus {
+  display: block;
+}
+
+/* ===== Answer ===== */
+.faq-answer {
+  margin-top: 20px;
+  color: var(--purple-600);
+  line-height: 1.6;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .bg-pattern--desktop {
+    display: none;
+  }
+
+  .bg-pattern--mobile {
+    display: block;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .card__title {
+    font-size: 28px;
+  }
+
+  .card__header {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.background-pattern {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.faq-container {
+  width: 500px;
+  height: 500px;
+  background-color: hsl(0, 100%, 100%);
+  padding: 30px 10px;
+  border-radius: 12px;
+}
+
+.star-icon {
+  margin-right: 20px;
+}
+
+button {
+  border: none;
+  background-color: hsl(0, 100%, 100%);
+  cursor: pointer;
+}
+
+.faq-row {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.questions {
+  font-weight: bold;
+}
+
+.questions:hover {
+  cursor: pointer;
+  color: hsl(292, 16%, 49%);
+}

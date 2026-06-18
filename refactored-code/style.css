@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(275, 100%, 97%);
+}
+
+.container {
+  width: 450px;
+}
+
+.title {
+  color: hsl(292, 42%, 14%);
+  display: flex;
+  font-size: 45px;
+  gap: 23px;
+}
+
+.section {
+  color: hsl(292, 16%, 49%);
+  margin: 30px 20px;
+}
+
+.section-title {
+  color: hsl(292, 42%, 14%);
+  /* 1. Hide the default browser marker. */
+  list-style: none;
+
+  /* 2. Position the plus icon on the right. */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-image: url('../assets/icon-plus.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  height: 25px;
+  border-bottom: 1px solid hsl(292, 42%, 14%);
+  padding-bottom: 30px;
+}
+
+.section[open] .section-title {
+  background-image: url('../assets/icon-minus.svg');
+}
+ 
